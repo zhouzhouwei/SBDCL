@@ -2,7 +2,7 @@ function [ Z, delete_atom_idx, valCost] = UpdateWeightpar(Psi, Y, NumPerClass)
 C = length(NumPerClass);
 initers = 100 ;
 eta = 1e-10; 
-tau1 = 1e-2;     % the threshold for pruning the small entries
+threshold1 = 1e-2;     % the threshold for pruning the small entries
 [M, N] = size(Y) ;
 M = M-C;
 if ~(sum(NumPerClass)==N)
@@ -41,7 +41,7 @@ parfor c = 1:C
         Zc = diag(gamma)*Psi'*Theta*Yc;
         
         % set small theta to zero
-        Zc(abs(Zc)./vecnorm(Zc)<tau1) = 0;
+        Zc(abs(Zc)./vecnorm(Zc)<threshold1) = 0;
         
         % update gamma and lambda 
         gamma_numer = vecnorm(Zc,2,2) ;
