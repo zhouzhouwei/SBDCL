@@ -1,8 +1,8 @@
-function [ Z, delete_atom_idx, valCost] = UpdateWeightpar(Psi, Y, NumPerClass,paras)
+function [ Z, delete_atom_idx, valCost] = UpdateWeightpar(Psi, Y, NumPerClass)
 C = length(NumPerClass);
 initers = 100 ;
 eta = 1e-10; 
-tau1 = paras.tau1;
+tau1 = 1e-2;     % the threshold for pruning the small entries
 [M, N] = size(Y) ;
 M = M-C;
 if ~(sum(NumPerClass)==N)

@@ -17,8 +17,7 @@ Results = cell(exnums,1);
 paras1.initDictSize = 988;  % dictionary size 
 paras1.sparsity = 80;  % Required for K-SVD initialization 
 paras1.iters = 30 ;    % the iterations     
-paras1.tau1 = 1e-2;    % the threshold for pruning the small entries
-paras1.tau2 = 1e-2;    % the threshold of stopping criteria  
+paras1.tau = 1e-2;    % the threshold of stopping criteria  
 
 
 % our method 

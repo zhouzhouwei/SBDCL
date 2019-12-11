@@ -18,7 +18,7 @@ for iter = 1:iters
     fprintf('Begining %d iteration... \n',iter) ;
     
     % %update weight Matrix S and delete the redundant atoms
-    [ Z, deleted_idx,valCost1] = UpdateWeightpar(Psi, Y, numPerClass, paras) ;
+    [ Z, deleted_idx,valCost1] = UpdateWeightpar(Psi, Y, numPerClass) ;
     Psi(:,deleted_idx) = [];
     Z(deleted_idx,:) = [];
     DicSize(iter) = size(Psi,2);
@@ -34,7 +34,7 @@ for iter = 1:iters
     valCost(iter,1) = valCost1 + valCost2 ;
 
     % stopping criteria: reconstruction error     
-    if ConErr(iter,1)<=paras.tau2
+    if ConErr(iter,1)<=paras.tau
         break;
     end 
 end

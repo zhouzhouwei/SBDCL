@@ -3,7 +3,7 @@ function Z = SBLgrouppar(Phi,test_data,paras)
 K0 = size(Phi,2);
 iters = 200;
 eta = 1e-10;
-tau1 = paras.tau1;
+threshold1 = 1e-2;    % the threshold for pruning the small entries
 Z = zeros(K0,Ntest);
 
 % main loop
@@ -30,7 +30,7 @@ parfor i=1:Ntest
         zhat = Gamma*Phitest'*Theta*feats;
         
         % % prune the small terms in x
-        zhat(abs(zhat)./norm(zhat)<tau1) = 0;
+        zhat(abs(zhat)./norm(zhat)<threshold1) = 0;
         
         %update lambda and gamma
         lambda = norm(feats-Phitest*zhat,2)/sqrt(trace(Theta));
@@ -80,7 +80,7 @@ parfor i=1:Ntest
         Theta = 1/lambda*eye(M) - 1/lambda*Phitest*((lambda*inv(Gamma) + Phitest'*Phitest)\Phitest') ; %#ok<MINV>
     end
     zhat = Gamma*Phitest'*Theta*feats;
-    zhat(abs(zhat)./norm(zhat)<tau1) = 0;
+    zhat(abs(zhat)./norm(zhat)<threshold1) = 0;
     if length(reserved_ids)==length(zhat)
         theta(reserved_ids) = zhat ;
     else
