@@ -1,7 +1,7 @@
 # SBDCL
 The Sparse Bayesian based joint Discriminative Dictionary and Classifier Learning algorithm
 
-This code is for paper titled 'A Bayesian approach for joint discriminative dictionary and classifier learning'.
+This code is for paper titled 'A Bayesian approach for joint discriminative dictionary and classifier learning'. This paper is under review. 
 
 This code is implemented in Matlab 2019a.
 
