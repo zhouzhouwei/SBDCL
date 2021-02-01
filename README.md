@@ -17,7 +17,7 @@ Step 1: install the OMPbox
 
 Step 2: install the ksvdbox following the readme.txt 
 
-Step 3: go to SBDCL file, run the main function 
+Step 3: go to demo file, run the main function 
 
 if you have any questions, please contact zhouwei@hust.edu.cn 
 
