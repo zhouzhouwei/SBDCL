@@ -20,3 +20,9 @@ Step 2: install the ksvdbox following the readme.txt
 Step 3: go to SBDCL file, run the main function 
 
 if you have any questions, please contact zhouwei@hust.edu.cn 
+
+if you use any part of our code, please cite our paper:
+
+  Wei Zhou, Yue Wu, Junlin Li, Maolin Wang, Hai-Tao Zhang,
+ "A Bayesian Approach for Joint Discriminative Dictionary and Classifier  Learning", 
+ submitted to IEEE Transactions on Systems, Man, and Cybernetics: Systems.
