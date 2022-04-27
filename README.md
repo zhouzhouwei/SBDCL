@@ -25,4 +25,4 @@ if you use any part of our code, please cite our paper:
 
   Wei Zhou, Yue Wu, Junlin Li, Maolin Wang, Hai-Tao Zhang,
  "A Bayesian Approach for Joint Discriminative Dictionary and Classifier  Learning", 
- submitted to IEEE Transactions on Systems, Man, and Cybernetics: Systems.
+ IEEE Transactions on Systems, Man, and Cybernetics: Systems, doi: 10.1109/TSMC.2022.3170443.
